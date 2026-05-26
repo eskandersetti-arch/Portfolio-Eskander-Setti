@@ -1,25 +1,34 @@
-// MOBILE MENU TOGGLE
+// MOBILE MENU TOGGLE (SAFE VERSION)
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
-
-// CLOSE MENU WHEN CLICKING LINK
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
+// Only run if elements exist
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
     });
-});
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+        });
+    });
+}
 
 // SMOOTH SCROLL EFFECT
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
+
         const target = document.querySelector(this.getAttribute("href"));
-        target.scrollIntoView({
-            behavior: "smooth"
-        });
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     });
-});plore and get in touch!', 'font-size: 14px; color: #764ba2;');
+});
+
+// SMALL CONSOLE MESSAGE (optional)
+console.log("Portfolio loaded successfully 🚀");
