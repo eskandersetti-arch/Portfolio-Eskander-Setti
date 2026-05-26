@@ -59,11 +59,13 @@ body {
     url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
 }
 
+/* LEFT SIDE */
 .hero-content {
     max-width: 600px;
     animation: fadeUp 1.2s ease;
 }
 
+/* TITLE */
 .hero h1 {
     font-size: 55px;
 }
@@ -112,10 +114,20 @@ body {
     color: white;
 }
 
-/* IMAGE */
+/* ⭐ FIXED IMAGE SECTION (IMPORTANT) */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-image img {
-    width: 300px;
-    border-radius: 20px;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4da3ff;
+    box-shadow: 0 0 25px rgba(77,163,255,0.6);
     animation: float 3s ease-in-out infinite;
 }
 
