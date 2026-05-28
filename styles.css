@@ -8,10 +8,10 @@
 
 /* COLOR SYSTEM */
 :root {
-    --primary: #2563eb;     /* modern blue */
-    --secondary: #7c3aed;   /* purple accent */
-    --text: #111827;        /* soft black */
-    --muted: #6b7280;       /* gray */
+    --primary: #2563eb;
+    --secondary: #7c3aed;
+    --text: #111827;
+    --muted: #6b7280;
     --bg: #ffffff;
     --card: #f9fafb;
     --border: #e5e7eb;
@@ -81,13 +81,19 @@ body {
     border: 1px solid var(--border);
 }
 
-/* HERO IMAGE */
+/* HERO IMAGE (SQUARE + BIGGER) */
 .hero-image img {
-    width: 200px;
-    height: 200px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 12px;
     border: 3px solid var(--border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
 }
 
 /* TEXT */
@@ -127,6 +133,7 @@ body {
 .primary:hover {
     transform: translateY(-2px);
     background: #1d4ed8;
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
 }
 
 /* SECONDARY BUTTON */
@@ -138,6 +145,7 @@ body {
 .secondary:hover {
     background: var(--primary);
     color: white;
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
 }
 
 /* SECTIONS */
@@ -148,7 +156,6 @@ section {
 h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: var(--text);
 }
 
 /* SKILLS */
@@ -190,28 +197,25 @@ h2 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.card a {
+/* LINKS (NEON HOVER) */
+.card a,
+.contact-box a {
     display: inline-block;
     margin-top: 10px;
     color: var(--primary);
     text-decoration: none;
+    transition: 0.3s;
 }
 
-.card a:hover {
+.card a:hover,
+.contact-box a:hover {
     color: var(--secondary);
+    text-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
 }
 
 /* CONTACT */
 .contact-box {
     text-align: center;
-}
-
-.contact-box a {
-    display: block;
-    margin: 10px;
-    color: var(--primary);
-    text-decoration: none;
-    transition: 0.3s;
 }
 
 .contact-box a:hover {
