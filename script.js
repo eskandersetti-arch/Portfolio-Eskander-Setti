@@ -1,34 +1,19 @@
-// MOBILE MENU TOGGLE (SAFE VERSION)
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+// THEME TOGGLE
+function toggleTheme(){
+    document.body.classList.toggle("light");
+}
 
-// Only run if elements exist
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
+// SCROLL REVEAL
+function reveal(){
+    const elements = document.querySelectorAll(".reveal");
 
-    document.querySelectorAll(".nav-link").forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-        });
+    elements.forEach(el=>{
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add("active");
+        }
     });
 }
 
-// SMOOTH SCROLL EFFECT
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
-});
-
-// SMALL CONSOLE MESSAGE (optional)
-console.log("Portfolio loaded successfully 🚀");
+window.addEventListener("scroll", reveal);
+reveal();oaded successfully 🚀");
