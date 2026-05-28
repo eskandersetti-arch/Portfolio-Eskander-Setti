@@ -1,3 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eskander Setti - Portfolio</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+
+        <a href="#home" class="logo">Eskander Setti</a>
+
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <div class="hero-content reveal">
+
+        <h1><span class="highlight">Eskander Setti</span></h1>
+
+        <p class="subtitle">Zukünftiger Softwareentwickler und Digitaler Problemlöser</p>
+
+        <p class="description">
+            Ich bin ein engagierter angehender Softwareentwickler mit einer starken Leidenschaft für Technologie, digitale Systeme und moderne IT-Lösungen.
+            Mein Ziel ist es, meine Fähigkeiten kontinuierlich weiterzuentwickeln und eine professionelle Karriere im Bereich Softwareentwicklung in Deutschland aufzubauen.
+        </p>
+
+        <div>
+            <a href="./cv.pdf" class="btn primary">CV herunterladen</a>
+            <a href="./zertifikate.pdf" class="btn secondary">Deutsch Zertifikate B1 und B2</a>
+        </div>
+
+    </div>
+
+    <div class="hero-image reveal">
+        <img src="./photo.jpg" alt="Eskander Setti">
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+
+    <h2>Über mich</h2>
+
+    <div class="description" style="max-width:700px; margin:auto; text-align:center;">
+
+        <p>Ich habe meinen Schulabschluss abgeschlossen und mich früh für Technologie interessiert.</p>
+
+        <p>Ich arbeite im Familienunternehmen Electro Setti.</p>
+
+        <p>Mein Ziel ist eine Ausbildung in Deutschland im Bereich Softwareentwicklung.</p>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <p>Logistics Coordination</p>
+        <div class="bar"><span style="width:85%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>Operational Planning</p>
+        <div class="bar"><span style="width:80%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>Microsoft Excel und Word</p>
+        <div class="bar"><span style="width:90%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>Problem Solving</p>
+        <div class="bar"><span style="width:88%"></span></div>
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
 <section id="projects" class="reveal">
 
     <h2>Projekte</h2>
@@ -50,3 +152,30 @@
     </div>
 
 </section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+
+    <h2>Kontakt</h2>
+
+    <div class="contact-box">
+
+        <a href="mailto:eskandarsetti@gmail.com">E-Mail senden</a>
+        <a href="https://wa.me/21653308760" target="_blank">WhatsApp</a>
+        <a href="https://github.com/eskandersetti-arch" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/eskandar-setti-367b94411/" target="_blank">LinkedIn</a>
+
+    </div>
+
+</section>
+
+<script>
+window.addEventListener("load", () => {
+    document.querySelectorAll(".reveal").forEach(el => {
+        el.classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
